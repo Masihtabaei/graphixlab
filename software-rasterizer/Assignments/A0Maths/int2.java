@@ -53,8 +53,7 @@ public final class Int2
    */
   public Int2 sub(Int2 rhs)
   {
-    // TODO Implement me!
-    return new Int2();
+    return new Int2(x - rhs.x, y - rhs.y);
   }
 
   /**
