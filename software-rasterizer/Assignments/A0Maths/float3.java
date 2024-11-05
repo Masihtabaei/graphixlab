@@ -102,9 +102,9 @@ public final class Float3
   public Float3 cross(Float3 rhs)
   {
     return new Float3(
-      ((y * rhs.z) - (z * rhs.y)),
-      ((z * rhs.x) - (x * rhs.z)),
-      ((x * rhs.y) - (y * rhs.x))
+      (y * rhs.z) - (z * rhs.y),
+      (z * rhs.x) - (x * rhs.z),
+      (x * rhs.y) - (y * rhs.x)
     );
   }
 
@@ -137,6 +137,10 @@ public final class Float3
    */
   public Float3 weightedSum(float beta, float gamma, Float3 b, Float3 c)
   {
-    return new Float3();
+    return new Float3(
+      x + (beta * b.x) + (gamma * c.x),
+      y + (beta * b.y) + (gamma * c.y),
+      z + (beta * b.z) + (gamma * c.z)
+    );
   }
 }
