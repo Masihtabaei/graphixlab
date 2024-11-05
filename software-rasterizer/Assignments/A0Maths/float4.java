@@ -1,7 +1,7 @@
 /**
  * A class that represents 4D vectors with floating-point components.
  */
-public final class float4
+public final class Float4
 {
   /** x component of the vector. */
   public float x;
@@ -18,7 +18,7 @@ public final class float4
   /**
    * Creates a 4D zero vector.   
    */
-  public float4()
+  public Float4()
   {
     x = 0;
     y = 0;
@@ -33,7 +33,7 @@ public final class float4
    * @param z_ The third component of 4D vector.
    * @param w_ The forth component of 4D vector.
    */
-  public float4(float x_, float y_, float z_, float w_)
+  public Float4(float x_, float y_, float z_, float w_)
   {
     x = x_;
     y = y_;
@@ -52,7 +52,7 @@ public final class float4
   /**
    * Returns true, if all components of this and rhs differ by less than 1e-6f.
    */
-  boolean equals(float4 rhs)
+  boolean equals(Float4 rhs)
   {
     return Math.abs(this.x - rhs.x) < 1e-6 && Math.abs(this.y - rhs.y) < 1e-6 && Math.abs(this.z - rhs.z) < 1e-6;
   }
