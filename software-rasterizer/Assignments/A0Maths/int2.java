@@ -1,29 +1,29 @@
 /** //<>//
  * A class that represents 2D vectors with integer numbers components.
  */
-public final class int2
+public final class Int2
 {
   /** x component of the vector. */
-  public int x;
+  private int x;
 
   /** y component of the vector. */
-  public int y;
+  private int y;
 
   /**
    * Constructs a zero vector.
    */
-  public int2()
+  public Int2()
   {
     x = 0;
     y = 0;
   }
 
   /**
-   * Constructs a int2 vector
+   * Constructs a Int2 vector
    * @param x_ The first component of this vector.
    * @param y_ The second component of this vector.
    */
-  public int2(int x_, int y_)
+  public Int2(int x_, int y_)
   {
     x = x_;
     y = y_;
@@ -32,7 +32,7 @@ public final class int2
   /**
    * Returns true, if all components of this and rhs differ by less than 1e-6f.
    */
-  boolean equals(int2 rhs)
+  boolean equals(Int2 rhs)
   {
     return this.x == rhs.x && this.y == rhs.y;
   }
@@ -49,12 +49,12 @@ public final class int2
    * Subtracts two vectors and returns the differences.
    * This method does not modify any members.
    * @param rhs Right-hand side of subtraction. Left-hand side is this.
-   * @return int2 A new vector containing the difference.
+   * @return Int2 A new vector containing the difference.
    */
-  public int2 sub(int2 rhs)
+  public Int2 sub(Int2 rhs)
   {
     // TODO Implement me!
-    return new int2();
+    return new Int2();
   }
 
   /**
@@ -63,7 +63,7 @@ public final class int2
    * @param rhs The rhs of the dot product
    * @return float The value of the dot product.
    */
-  public int dot(int2 rhs)
+  public int dot(Int2 rhs)
   {
     // TODO Implement me!
     return -1;
@@ -72,11 +72,11 @@ public final class int2
   /**
    * Computes the cross product of this.
    * This method does not modify any members.
-   * @return int2 The cross product between this x rhs.
+   * @return Int2 The cross product between this x rhs.
    */
-  public int2 cross()
+  public Int2 cross()
   {
     // TODO Implement me!
-    return new int2();
+    return new Int2();
   }
 }
