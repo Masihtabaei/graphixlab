@@ -15,7 +15,7 @@ public final class LineRasterizerMeyer
     }
   }
 
-  public static final void drawLine(int[] framebuffer, int w, int h, int2 a, int2 b, int col)
+  public static final void drawLine(int[] framebuffer, int w, int h, Int2 a, Int2 b, int col)
   {
     ClipResult clip = LineClipping.clip(a, b, w-1, h-1);
     if (clip.cull)

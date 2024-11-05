@@ -1,6 +1,6 @@
 public final class ClipResult
 {
-  public int2 a;   
-  public int2 b;
+  public Int2 a;   
+  public Int2 b;
   public boolean cull = false;
 }

@@ -1,6 +1,17 @@
 public final class LineRasterizer
 {
-  private static final void drawLine(int[] framebuffer, int w, int2 a, int2 b, int col)
+  private static final void drawLine(int[] framebuffer, int w, Int2 b, int col){
+    float m = b.y / (float) b.x;
+    int y = 0;
+    float yRaw = 0.0f;
+    for(int x = 0; x <= b.x; x++){
+      yRaw = m * x;
+      y = Math.round(yRaw);
+      framebuffer[x + y * w] = col;
+    }
+  }
+  
+  private static final void drawLine(int[] framebuffer, int w, Int2 a, Int2 b, int col)
   {
     int y = 0;
     int err = 0;
@@ -15,8 +26,9 @@ public final class LineRasterizer
       framebuffer[y * w + x] = col;
     }
   }
+  
 
-  public static final void drawLine(int[] framebuffer, int w, int h, int2 a, int2 b, int col)
+  public static final void drawLine(int[] framebuffer, int w, int h, Int2 a, Int2 b, int col)
   {
     ClipResult clip = LineClipping.clip(a, b, w-1, h-1);
     if (clip.cull)

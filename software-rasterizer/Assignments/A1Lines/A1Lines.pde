@@ -5,9 +5,9 @@ void setup()
 
 void drawTestLine(float alpha, float l, int col)
 {
-  int2 a = new int2((int)(width / 2.0f + 0.5f), (int)(height / 2.0f + 0.5f));
+  Int2 a = new Int2((int)(width / 2.0f + 0.5f), (int)(height / 2.0f + 0.5f));
   float r =  l * (width / 2);
-  int2 b = new int2(a.x + (int)(r * cos(alpha) + 0.5f), a.y + (int)(r * sin(alpha) + 0.5f));  
+  Int2 b = new Int2(a.x + (int)(r * cos(alpha) + 0.5f), a.y + (int)(r * sin(alpha) + 0.5f));  
   LineRasterizer.drawLine(pixels, width, height, a, b, col);  
 }
 
@@ -19,12 +19,12 @@ void test_animation_NoClip()
  
 void test_x_fast_a_at_origin_dx_positive_dy_positive()
 {
-  LineRasterizer.drawLine(pixels, width, height, new int2(0,0), new int2(width-1,0), #ffff00ff);
-  LineRasterizer.drawLine(pixels, width, height, new int2(0,0), new int2(width-1,height/2), #ffffff00);
-  LineRasterizer.drawLine(pixels, width, height, new int2(0,0), new int2(width-1,height-1), #ff00ffff);
-  LineRasterizer.drawLine(pixels, width, height, new int2(0,0), new int2(width/2,height/16), #ffff0000);
-  LineRasterizer.drawLine(pixels, width, height, new int2(0,0), new int2(width/3*2,height/8), #ff00ff00);
-  LineRasterizer.drawLine(pixels, width, height, new int2(0,0), new int2(width/4*3,height/3), #ff0000ff);  
+  LineRasterizer.drawLine(pixels, width, height, new Int2(0,0), new Int2(width-1,0), #ffff00ff);
+  LineRasterizer.drawLine(pixels, width, height, new Int2(0,0), new Int2(width-1,height/2), #ffffff00);
+  LineRasterizer.drawLine(pixels, width, height, new Int2(0,0), new Int2(width-1,height-1), #ff00ffff);
+  LineRasterizer.drawLine(pixels, width, height, new Int2(0,0), new Int2(width/2,height/16), #ffff0000);
+  LineRasterizer.drawLine(pixels, width, height, new Int2(0,0), new Int2(width/3*2,height/8), #ff00ff00);
+  LineRasterizer.drawLine(pixels, width, height, new Int2(0,0), new Int2(width/4*3,height/3), #ff0000ff);  
 }
 
 void test_x_fast_dx_pos_dy_pos()

@@ -5,7 +5,7 @@ public final class LineClipping
   public static final int top     = 0B0010;
   public static final int bottom = 0B0001;
 
-  public static int outcode(int2 p, int x_max, int y_max)
+  public static int outcode(Int2 p, int x_max, int y_max)
   {
     return
       (p.x <  0 ? left   : 0B0000) |
@@ -14,12 +14,12 @@ public final class LineClipping
       (p.y >  y_max ? bottom : 0B0000);
   }
 
-  public static final ClipResult clip(int2 a, int2 b, int x_max, int y_max)
+  public static final ClipResult clip(Int2 a, Int2 b, int x_max, int y_max)
   {    
     ClipResult result = new ClipResult();
     result.cull = false;
-    result.a = new int2(a.x, a.y);   
-    result.b = new int2(b.x, b.y);
+    result.a = new Int2(a.x, a.y);   
+    result.b = new Int2(b.x, b.y);
     return result;
   }
 }
