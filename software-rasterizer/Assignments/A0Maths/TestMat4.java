@@ -1,6 +1,6 @@
 public final class TestMat4
 {
-  private static void compareAndPrint(float4 result, float4 desiredResult)
+  private static void compareAndPrint(Float4 result, Float4 desiredResult)
   {
     if (result.equals(desiredResult))
     {
@@ -40,11 +40,11 @@ public final class TestMat4
 
     setIdentity0_test();
 
-    mul_float4_0_test();
-    mul_float4_1_test();
-    mul_float4_2_test();
-    mul_float4_3_test();
-    mul_float4_4_test();
+    mul_Float4_0_test();
+    mul_Float4_1_test();
+    mul_Float4_2_test();
+    mul_Float4_3_test();
+    mul_Float4_4_test();
 
     mul_mat4_withZeroMatrixRight_test();
     mul_mat4_withZeroMatrixLeft_test();
@@ -92,73 +92,73 @@ public final class TestMat4
     }
   }
 
-  private static void mul_float4_0_test()
+  private static void mul_Float4_0_test()
   {
-    System.out.print("Test mat4 mul_float4_0 ");
+    System.out.print("Test mat4 mul_Float4_0 ");
     mat4 a = new mat4(
       1, 2, 3, 4,
       5, 6, 7, 8,
       9, 10, 11, 12,
       13, 14, 15, 16);
-    float4 b = new float4(1, 0, 0, 0);
-    float4 c = a.mul(b);
+    Float4 b = new Float4(1, 0, 0, 0);
+    Float4 c = a.mul(b);
 
-    compareAndPrint(c, new float4(1, 5, 9, 13));
+    compareAndPrint(c, new Float4(1, 5, 9, 13));
   }
 
-  private static void mul_float4_1_test()
+  private static void mul_Float4_1_test()
   {
-    System.out.print("Test mat4 mul_float4_1 ");
+    System.out.print("Test mat4 mul_Float4_1 ");
     mat4 a = new mat4(
       1, 2, 3, 4,
       5, 6, 7, 8,
       9, 10, 11, 12,
       13, 14, 15, 16);
-    float4 b = new float4(0, 1, 0, 0);
-    float4 c = a.mul(b);
+    Float4 b = new Float4(0, 1, 0, 0);
+    Float4 c = a.mul(b);
 
-    compareAndPrint(c, new float4(2, 6, 10, 14));
+    compareAndPrint(c, new Float4(2, 6, 10, 14));
   }
 
-  private static void mul_float4_2_test()
+  private static void mul_Float4_2_test()
   {
-    System.out.print("Test mat4 mul_float4_2 ");
+    System.out.print("Test mat4 mul_Float4_2 ");
     mat4 a = new mat4(
       1, 2, 3, 4,
       5, 6, 7, 8,
       9, 10, 11, 12,
       13, 14, 15, 16);
-    float4 b = new float4(0, 0, 1, 0);
-    float4 c = a.mul(b);
+    Float4 b = new Float4(0, 0, 1, 0);
+    Float4 c = a.mul(b);
 
-    compareAndPrint(c, new float4(3, 7, 11, 15));
+    compareAndPrint(c, new Float4(3, 7, 11, 15));
   }
 
-  private static void mul_float4_3_test()
+  private static void mul_Float4_3_test()
   {
-    System.out.print("Test mat4 mul_float4_3 ");
+    System.out.print("Test mat4 mul_Float4_3 ");
     mat4 a = new mat4(
       1, 2, 3, 4,
       5, 6, 7, 8,
       9, 10, 11, 12,
       13, 14, 15, 16);
-    float4 b = new float4(0, 0, 0, 1);
-    float4 c = a.mul(b);
+    Float4 b = new Float4(0, 0, 0, 1);
+    Float4 c = a.mul(b);
 
-    compareAndPrint(c, new float4(4, 8, 12, 16));
+    compareAndPrint(c, new Float4(4, 8, 12, 16));
   }
 
-  private static void mul_float4_4_test()
+  private static void mul_Float4_4_test()
   {
-    System.out.print("Test mat4 mul_float4_3 ");
+    System.out.print("Test mat4 mul_Float4_3 ");
     mat4 a = new mat4(
       1, -2, 3, 4,
       5, 6, 7, 8,
       -9, 10, -11, 12,
       13, 14, 15, -16);
-    float4 b = new float4(3, -1, -5, 1);
-    float4 c = a.mul(b);
-    compareAndPrint(c, new float4(-6, -18, 30, -66));
+    Float4 b = new Float4(3, -1, -5, 1);
+    Float4 c = a.mul(b);
+    compareAndPrint(c, new Float4(-6, -18, 30, -66));
   }
 
   private static void mul_mat4_withZeroMatrixRight_test()

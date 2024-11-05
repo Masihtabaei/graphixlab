@@ -151,13 +151,13 @@ public final class mat4
 
   /**
    * Computes and returns the matrix-vector multiplication of this * rhs.
-   * @param rhs float4 vector as right-hand side of the product.
-   * @return float4 The matrix-vector product this * rhs.
+   * @param rhs Float4 vector as right-hand side of the product.
+   * @return Float4 The matrix-vector product this * rhs.
    */
-  public float4 mul(float4 rhs)
+  public Float4 mul(Float4 rhs)
   {
     // TODO Implement me!
-    return new float4
+    return new Float4
       (
       );
   }
