@@ -17,7 +17,7 @@ public final class TestMat4
     }
   }
 
-  private static void compareAndPrint(mat4 result, mat4 desiredResult)
+  private static void compareAndPrint(Mat4 result, Mat4 desiredResult)
   {
     if (result.equals(desiredResult))
     {
@@ -46,19 +46,19 @@ public final class TestMat4
     mul_Float4_3_test();
     mul_Float4_4_test();
 
-    mul_mat4_withZeroMatrixRight_test();
-    mul_mat4_withZeroMatrixLeft_test();
+    mul_Mat4_withZeroMatrixRight_test();
+    mul_Mat4_withZeroMatrixLeft_test();
 
-    mul_mat4_withIdentityMatrixRight_test();
-    mul_mat4_withIdentityMatrixLeft_test();
+    mul_Mat4_withIdentityMatrixRight_test();
+    mul_Mat4_withIdentityMatrixLeft_test();
 
-    mul_mat4_0_test();
+    mul_Mat4_0_test();
   }
 
   private static void setZero0_test()
   {
-    System.out.print("Test mat4 setZero0 ");
-    mat4 a = new mat4();
+    System.out.print("Test Mat4 setZero0 ");
+    Mat4 a = new Mat4();
     a.setZero();
     if (
       a.a00 == 0 && a.a01 == 0 && a.a02 == 0 && a.a03 == 0 &&
@@ -76,8 +76,8 @@ public final class TestMat4
 
   private static void setIdentity0_test()
   {
-    System.out.print("Test mat4 setIdentity0 ");
-    mat4 a = new mat4();
+    System.out.print("Test Mat4 setIdentity0 ");
+    Mat4 a = new Mat4();
     a.setIdentity();
     if (
       a.a00 == 1 && a.a01 == 0 && a.a02 == 0 && a.a03 == 0 &&
@@ -94,8 +94,8 @@ public final class TestMat4
 
   private static void mul_Float4_0_test()
   {
-    System.out.print("Test mat4 mul_Float4_0 ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Float4_0 ");
+    Mat4 a = new Mat4(
       1, 2, 3, 4,
       5, 6, 7, 8,
       9, 10, 11, 12,
@@ -108,8 +108,8 @@ public final class TestMat4
 
   private static void mul_Float4_1_test()
   {
-    System.out.print("Test mat4 mul_Float4_1 ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Float4_1 ");
+    Mat4 a = new Mat4(
       1, 2, 3, 4,
       5, 6, 7, 8,
       9, 10, 11, 12,
@@ -122,8 +122,8 @@ public final class TestMat4
 
   private static void mul_Float4_2_test()
   {
-    System.out.print("Test mat4 mul_Float4_2 ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Float4_2 ");
+    Mat4 a = new Mat4(
       1, 2, 3, 4,
       5, 6, 7, 8,
       9, 10, 11, 12,
@@ -136,8 +136,8 @@ public final class TestMat4
 
   private static void mul_Float4_3_test()
   {
-    System.out.print("Test mat4 mul_Float4_3 ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Float4_3 ");
+    Mat4 a = new Mat4(
       1, 2, 3, 4,
       5, 6, 7, 8,
       9, 10, 11, 12,
@@ -150,8 +150,8 @@ public final class TestMat4
 
   private static void mul_Float4_4_test()
   {
-    System.out.print("Test mat4 mul_Float4_3 ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Float4_3 ");
+    Mat4 a = new Mat4(
       1, -2, 3, 4,
       5, 6, 7, 8,
       -9, 10, -11, 12,
@@ -161,88 +161,88 @@ public final class TestMat4
     compareAndPrint(c, new Float4(-6, -18, 30, -66));
   }
 
-  private static void mul_mat4_withZeroMatrixRight_test()
+  private static void mul_Mat4_withZeroMatrixRight_test()
   {
-    System.out.print("Test mat4 mul_mat4_withZeroMatrixRight ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Mat4_withZeroMatrixRight ");
+    Mat4 a = new Mat4(
       1, -2, 3, 4,
       5, 6, 7, 8,
       -9, 10, -11, 12,
       13, 14, 15, -16);
 
-    mat4 b = new mat4();
+    Mat4 b = new Mat4();
     b.setZero();
 
-    mat4 c = a.mul(b);
+    Mat4 c = a.mul(b);
 
-    mat4 desiredResult = new mat4();
+    Mat4 desiredResult = new Mat4();
     desiredResult.setZero();
     compareAndPrint(c, desiredResult);
   }
 
-  private static void mul_mat4_withZeroMatrixLeft_test()
+  private static void mul_Mat4_withZeroMatrixLeft_test()
   {
-    System.out.print("Test mat4 mul_mat4_withZeroMatrixLeft ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Mat4_withZeroMatrixLeft ");
+    Mat4 a = new Mat4(
       1, -2, 3, 4,
       5, 6, 7, 8,
       -9, 10, -11, 12,
       13, 14, 15, -16);
 
-    mat4 b = new mat4();
+    Mat4 b = new Mat4();
     b.setZero();
 
-    mat4 c = b.mul(a);
+    Mat4 c = b.mul(a);
 
-    mat4 desiredResult = new mat4();
+    Mat4 desiredResult = new Mat4();
     desiredResult.setZero();
     compareAndPrint(c, desiredResult);
   }
 
-  private static void mul_mat4_withIdentityMatrixRight_test()
+  private static void mul_Mat4_withIdentityMatrixRight_test()
   {
-    System.out.print("Test mat4 mul_mat4_withIdentityMatrixRight ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Mat4_withIdentityMatrixRight ");
+    Mat4 a = new Mat4(
       1, -2, 3, 4,
       5, 6, 7, 8,
       -9, 10, -11, 12,
       13, 14, 15, -16);
 
-    mat4 b = new mat4();
+    Mat4 b = new Mat4();
     b.setIdentity();
 
-    mat4 c = a.mul(b);
+    Mat4 c = a.mul(b);
 
     compareAndPrint(c, a);
   }
 
-  private static void mul_mat4_withIdentityMatrixLeft_test()
+  private static void mul_Mat4_withIdentityMatrixLeft_test()
   {
-    System.out.print("Test mat4 mul_mat4_withIdentityMatrixLeft ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Mat4_withIdentityMatrixLeft ");
+    Mat4 a = new Mat4(
       1, -2, 3, 4,
       5, 6, 7, 8,
       -9, 10, -11, 12,
       13, 14, 15, -16);
 
-    mat4 b = new mat4();
+    Mat4 b = new Mat4();
     b.setIdentity();
 
-    mat4 c = a.mul(b);
+    Mat4 c = a.mul(b);
 
     compareAndPrint(c, a);
   }
 
-  private static void mul_mat4_0_test()
+  private static void mul_Mat4_0_test()
   {
-    System.out.print("Test mat4 mul_mat4_0 ");
-    mat4 a = new mat4(
+    System.out.print("Test Mat4 mul_Mat4_0 ");
+    Mat4 a = new Mat4(
       1, -2, 3, 4,
       5, 6, 7, 8,
       -9, 10, -11, 12,
       13, 14, 15, -16);
 
-    mat4 b = new mat4(
+    Mat4 b = new Mat4(
       -5, -2, 5, 9,
       3, 7, 4, 1,
       7, 3, 7, 8,
@@ -250,8 +250,8 @@ public final class TestMat4
       );
 
 
-    mat4 c = a.mul(b);
-    mat4 desiredResult = new mat4(
+    Mat4 c = a.mul(b);
+    Mat4 desiredResult = new Mat4(
       14, -27, 42, 35,
       50, 13, 146, 115,
       10, -5, -10, -147,

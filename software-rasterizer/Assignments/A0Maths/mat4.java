@@ -1,7 +1,7 @@
 /**
  * A class that represents 4x4 matrices.
  */
-public final class mat4
+public final class Mat4
 {
   /** Element at row 0, column 0 */
   public float a00;
@@ -42,7 +42,7 @@ public final class mat4
   /**
    * Creates a zero matrix.
    */
-  public mat4()
+  public Mat4()
   {
     setZero();
   }
@@ -67,7 +67,7 @@ public final class mat4
    * @param a32_ Element at row 3, column 2
    * @param a33_ Element at row 3. column 3
    */
-  public mat4(
+  public Mat4(
     float a00_, float a01_, float a02_, float a03_,
     float a10_, float a11_, float a12_, float a13_,
     float a20_, float a21_, float a22_, float a23_,
@@ -97,7 +97,7 @@ public final class mat4
   /**
    * Returns true, if all components of this and rhs differ by less than 1e-6f.
    */
-  boolean equals(mat4 rhs)
+  boolean equals(Mat4 rhs)
   {
     return
       Math.abs(this.a00 - rhs.a00) < 1e-6 &&
@@ -137,7 +137,8 @@ public final class mat4
    */
   public void setIdentity()
   {
-    // TODO Implement me!
+    setZero();
+    a00 = a11 = a22 = a33 = 1.0f;
   }
 
   /**
@@ -165,12 +166,12 @@ public final class mat4
   /**
    * Computes and returns the matrix-matrix multiplication of this * rhs.
    * @param rhs Right-hand side of matrix-matrix product.
-   * @return mat4 The product matrix this * rhs.
+   * @return Mat4 The product matrix this * rhs.
    */
-  public mat4 mul(mat4 rhs)
+  public Mat4 mul(Mat4 rhs)
   {
     // TODO Implement me!
-    return new mat4
+    return new Mat4
       (
 
       );
