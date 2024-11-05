@@ -1,7 +1,7 @@
 /** //<>//
  * A class that represents 3D vectors with floating-point components.
  */
-public final class float3
+public final class Float3
 {
   /** x component of the vector. */
   public float x;
@@ -15,7 +15,7 @@ public final class float3
   /**
    * Returns true, if all components of this and rhs differ by less than 1e-6f.
    */
-  boolean equals(float3 rhs)
+  boolean equals(Float3 rhs)
   {
     return Math.abs(this.x - rhs.x) < 1e-6 && Math.abs(this.y - rhs.y) < 1e-6 && Math.abs(this.z - rhs.z) < 1e-6;
   }
@@ -31,7 +31,7 @@ public final class float3
   /**
    * Creates a new vector with all components set to zero.
    */
-  public float3()
+  public Float3()
   {
     x = 0;
     y = 0;
@@ -44,7 +44,7 @@ public final class float3
    * @param y_ The second component.
    * @param z_ The third component.
    */
-  public float3(float x_, float y_, float z_)
+  public Float3(float x_, float y_, float z_)
   {
     x = x_;
     y = y_;
@@ -55,24 +55,24 @@ public final class float3
    * Adds two vectors and returns the sum.
    * This method does not modify any members.
    * @param rhs Right-hand side of addition. Left-hand side is this.
-   * @return float3 A new vector containing the sum.
+   * @return Float3 A new vector containing the sum.
    */
-  public float3 add(float3 rhs)
+  public Float3 add(Float3 rhs)
   {
     // TODO Implement me!
-    return new float3();
+    return new Float3();
   }
 
   /**
    * Subtracts two vectors and returns the differences.
    * This method does not modify any members.
    * @param rhs Right-hand side of subtraction. Left-hand side is this.
-   * @return float3 A new vector containing the difference.
+   * @return Float3 A new vector containing the difference.
    */
-  public float3 sub(float3 rhs)
+  public Float3 sub(Float3 rhs)
   {
     // TODO Implement me!
-    return new float3();
+    return new Float3();
   }
 
   /**
@@ -81,7 +81,7 @@ public final class float3
    * @param rhs The rhs of the dot product
    * @return float The value of the dot product.
    */
-  public float dot(float3 rhs)
+  public float dot(Float3 rhs)
   {
     // TODO Implement me!
     return 1.0f;
@@ -92,11 +92,11 @@ public final class float3
    * Note that this operation is not commutative.
    * This method does not modify any members.
    * @param rhs Right-hand side of the cross-product.
-   * @return float3 The cross product between this x rhs.
+   * @return Float3 The cross product between this x rhs.
    */
-  public float3 cross(float3 rhs)
+  public Float3 cross(Float3 rhs)
   {
-    return new float3();
+    return new Float3();
   }
 
   /** Normalizes this vector such that it points in the same direction as the original this vector but has Euclidean-length of 1.
@@ -115,10 +115,10 @@ public final class float3
    * @param gamma A scalar value.
    * @param b A vector value.
    * @param c A vector value.
-   * @return float3 this + beta * b + gamma * c.
+   * @return Float3 this + beta * b + gamma * c.
    */
-  public float3 weightedSum(float beta, float gamma, float3 b, float3 c)
+  public Float3 weightedSum(float beta, float gamma, Float3 b, Float3 c)
   {
-    return new float3();
+    return new Float3();
   }
 }
