@@ -173,10 +173,17 @@ public final class Mat4
    */
   public Mat4 mul(Mat4 rhs)
   {
-    // TODO Implement me!
+    
+    Float4 resultFirstColumn = this.mul(new Float4(rhs.a00, rhs.a10, rhs.a20, rhs.a30));
+    Float4 resultSecondColumn = this.mul(new Float4(rhs.a01, rhs.a11, rhs.a21, rhs.a31));
+    Float4 resultThirdColumn = this.mul(new Float4(rhs.a02, rhs.a12, rhs.a22, rhs.a32));
+    Float4 resultFourthColumn = this.mul(new Float4(rhs.a03, rhs.a13, rhs.a23, rhs.a33));
     return new Mat4
       (
-
+        resultFirstColumn.x, resultSecondColumn.x, resultThirdColumn.x, resultFourthColumn.x,
+        resultFirstColumn.y, resultSecondColumn.y, resultThirdColumn.y, resultFourthColumn.y,
+        resultFirstColumn.z, resultSecondColumn.z, resultThirdColumn.z, resultFourthColumn.z,
+        resultFirstColumn.w, resultSecondColumn.w, resultThirdColumn.w, resultFourthColumn.w
       );
   }
 }

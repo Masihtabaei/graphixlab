@@ -1,4 +1,4 @@
-/** //<>//
+/** //<>// //<>//
  * A class that represents 3D vectors with floating-point components.
  */
 public final class Float3
