@@ -1,5 +1,5 @@
 /**
- * A class that represents 2D vectors with integer numbers components.
+ * A class that represents 2D vectors with integer numbers as components.
  */
 public final class Int2
 {
@@ -46,10 +46,10 @@ public final class Int2
   }
 
   /**
-   * Subtracts two vectors and returns the differences.
+   * Adds two vectors and returns the sum.
    * This method does not modify any members.
-   * @param rhs Right-hand side of subtraction. Left-hand side is this.
-   * @return Int2 A new vector containing the difference.
+   * @param rhs Right-hand side of addition. Left-hand side is this.
+   * @return Int2 A new vector containing the sum.
    */
   public Int2 add(Int2 rhs)
   {
@@ -81,7 +81,7 @@ public final class Int2
   /**
    * Computes the cross product of this.
    * This method does not modify any members.
-   * @return Int2 The cross product between this x rhs.
+   * @return Int2 The 2D cross product of the vector.
    */
   public Int2 cross()
   {
