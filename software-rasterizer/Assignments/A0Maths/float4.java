@@ -50,6 +50,19 @@ public final class Float4
   }
 
   /**
+   * Computes and returns the dot product (inner product, scalar product) between this vector and the vector given in rhs.
+   * This method does not modify any members.
+   * @param rhs The rhs of the dot product
+   * @return float The value of the dot product.
+   */
+  public float dot(Float4 rhs)
+  {
+    return (
+      (xyz().dot(rhs.xyz())) + (w * rhs.w)
+    );
+  }
+
+  /**
    * Returns true, if all components of this and rhs differ by less than 1e-6f.
    */
   boolean equals(Float4 rhs)
