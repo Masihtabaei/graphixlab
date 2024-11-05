@@ -102,18 +102,27 @@ public final class Float3
   public Float3 cross(Float3 rhs)
   {
     return new Float3(
-      (y * rhs.z) - (z * rhs.y),
-      (z * rhs.x) - (x * rhs.z),
-      (x * rhs.y) - (y * rhs.x)
+      ((y * rhs.z) - (z * rhs.y)),
+      ((z * rhs.x) - (x * rhs.z)),
+      ((x * rhs.y) - (y * rhs.x))
     );
   }
 
+  public double length(){
+    return Math.sqrt(
+      (x * x) + (y * y) + (z * z)
+    );
+  }
+  
   /** Normalizes this vector such that it points in the same direction as the original this vector but has Euclidean-length of 1.
    * This method  modifies the member of an object of this class
    */
   public void normalize()
   {
-    // TODO Implement me!
+    float vectorLength = (float) length();
+    x /= vectorLength;
+    y /= vectorLength;
+    z /= vectorLength;
   }
 
   /**
