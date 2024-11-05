@@ -101,7 +101,11 @@ public final class Float3
    */
   public Float3 cross(Float3 rhs)
   {
-    return new Float3();
+    return new Float3(
+      (y * rhs.z) - (z * rhs.y),
+      (z * rhs.x) - (x * rhs.z),
+      (x * rhs.y) - (y * rhs.x)
+    );
   }
 
   /** Normalizes this vector such that it points in the same direction as the original this vector but has Euclidean-length of 1.
