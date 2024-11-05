@@ -1,7 +1,7 @@
-/** //<>//
- * A class that represents 2D vectors with integer numbers components.
+/**
+ * A class that represents 2D vectors with integer numbers as components.
  */
-public final class int2
+public final class Int2
 {
   /** x component of the vector. */
   public int x;
@@ -12,18 +12,18 @@ public final class int2
   /**
    * Constructs a zero vector.
    */
-  public int2()
+  public Int2()
   {
     x = 0;
     y = 0;
   }
 
   /**
-   * Constructs a int2 vector
+   * Constructs a Int2 vector
    * @param x_ The first component of this vector.
    * @param y_ The second component of this vector.
    */
-  public int2(int x_, int y_)
+  public Int2(int x_, int y_)
   {
     x = x_;
     y = y_;
@@ -32,7 +32,7 @@ public final class int2
   /**
    * Returns true, if all components of this and rhs differ by less than 1e-6f.
    */
-  boolean equals(int2 rhs)
+  boolean equals(Int2 rhs)
   {
     return this.x == rhs.x && this.y == rhs.y;
   }
@@ -46,14 +46,25 @@ public final class int2
   }
 
   /**
+   * Adds two vectors and returns the sum.
+   * This method does not modify any members.
+   * @param rhs Right-hand side of addition. Left-hand side is this.
+   * @return Int2 A new vector containing the sum.
+   */
+  public Int2 add(Int2 rhs)
+  {
+    return new Int2(x + rhs.x, y + rhs.y);
+  }
+  
+  /**
    * Subtracts two vectors and returns the differences.
    * This method does not modify any members.
    * @param rhs Right-hand side of subtraction. Left-hand side is this.
-   * @return int2 A new vector containing the difference.
+   * @return Int2 A new vector containing the difference.
    */
-  public int2 sub(int2 rhs)
+  public Int2 sub(Int2 rhs)
   {
-    return new int2(this.x - rhs.x, this.y - rhs.y);
+    return new Int2(x - rhs.x, y - rhs.y);
   }
 
   /**
@@ -62,18 +73,18 @@ public final class int2
    * @param rhs The rhs of the dot product
    * @return float The value of the dot product.
    */
-  public int dot(int2 rhs)
+  public int dot(Int2 rhs)
   {
-    return this.x * rhs.x + this.y * rhs.y;
+    return ((x * rhs.x) + (y * rhs.y));
   }
 
   /**
    * Computes the cross product of this.
    * This method does not modify any members.
-   * @return int2 The cross product between this x rhs.
+   * @return Int2 The 2D cross product of the vector.
    */
-  public int2 cross()
+  public Int2 cross()
   {
-    return new int2(-this.y, this.x);
+    return new Int2(-y, x);
   }
 }
