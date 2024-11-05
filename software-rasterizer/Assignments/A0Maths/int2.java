@@ -51,6 +51,17 @@ public final class Int2
    * @param rhs Right-hand side of subtraction. Left-hand side is this.
    * @return Int2 A new vector containing the difference.
    */
+  public Int2 add(Int2 rhs)
+  {
+    return new Int2(x + rhs.x, y + rhs.y);
+  }
+  
+  /**
+   * Subtracts two vectors and returns the differences.
+   * This method does not modify any members.
+   * @param rhs Right-hand side of subtraction. Left-hand side is this.
+   * @return Int2 A new vector containing the difference.
+   */
   public Int2 sub(Int2 rhs)
   {
     return new Int2(x - rhs.x, y - rhs.y);
