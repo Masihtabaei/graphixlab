@@ -64,8 +64,7 @@ public final class Int2
    */
   public int dot(Int2 rhs)
   {
-    // TODO Implement me!
-    return -1;
+    return ((x * rhs.x) + (y * rhs.y));
   }
 
   /**
