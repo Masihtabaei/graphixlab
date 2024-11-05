@@ -1,13 +1,13 @@
-/** //<>//
+/**
  * A class that represents 2D vectors with integer numbers components.
  */
 public final class Int2
 {
   /** x component of the vector. */
-  private int x;
+  public int x;
 
   /** y component of the vector. */
-  private int y;
+  public int y;
 
   /**
    * Constructs a zero vector.
