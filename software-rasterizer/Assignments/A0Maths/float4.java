@@ -41,12 +41,12 @@ public final class float4
     w = w_;
   }
 
-  /** Returns a float3 vector containing only the x, y, and z component of this vector.
-   * @return float3 [x, y, z]^T.
+  /** Returns a Float3 vector containing only the x, y, and z component of this vector.
+   * @return Float3 [x, y, z]^T.
    */
-  public float3 xyz()
+  public Float3 xyz()
   {
-    return new float3(x, y, z);
+    return new Float3(x, y, z);
   }
 
   /**
