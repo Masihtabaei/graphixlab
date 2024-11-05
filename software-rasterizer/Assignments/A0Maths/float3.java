@@ -74,8 +74,11 @@ public final class Float3
    */
   public Float3 sub(Float3 rhs)
   {
-    // TODO Implement me!
-    return new Float3();
+    return new Float3(
+      x - rhs.x,
+      y - rhs.y,
+      z - rhs.z
+    );
   }
 
   /**
