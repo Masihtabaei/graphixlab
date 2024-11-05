@@ -74,7 +74,6 @@ public final class Int2
    */
   public Int2 cross()
   {
-    // TODO Implement me!
-    return new Int2();
+    return new Int2(-y, x);
   }
 }
