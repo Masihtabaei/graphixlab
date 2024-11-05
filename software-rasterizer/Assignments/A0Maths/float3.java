@@ -89,8 +89,7 @@ public final class Float3
    */
   public float dot(Float3 rhs)
   {
-    // TODO Implement me!
-    return 1.0f;
+    return ((x * rhs.x) + (y * rhs.y) + (z * rhs.z));
   }
 
   /**
