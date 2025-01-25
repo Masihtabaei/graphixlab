@@ -2,12 +2,21 @@ public final class LineRasterizer
 {
   private static final void drawLine(int[] framebuffer, int w, Int2 b, int col){
     float m = b.y / (float) b.x;
-    int y = 0;
-    float yRaw = 0.0f;
+    int y = 0; //<>//
+    float rawY = 0.0f;
     for(int x = 0; x <= b.x; x++){
-      yRaw = m * x;
-      y = Math.round(yRaw);
+      rawY = m * x;
+      y = Math.round(rawY);
       framebuffer[x + y * w] = col;
+    }
+  }
+  
+   private static final void compactDrawLine(int[] framebuffer, int w, Int2 b, int col){
+    float m = b.y / (float) b.x;
+    int y = - (int) m;
+    for(int x = 0; x <= b.x; x++){
+      y += (int) m;
+      framebuffer[x + y * w] = col; //<>//
     }
   }
   
@@ -36,6 +45,6 @@ public final class LineRasterizer
       return;
     }
 
-    drawLine(framebuffer, w, b, col);
+    compactDrawLine(framebuffer, w, b, col);
   }
 }

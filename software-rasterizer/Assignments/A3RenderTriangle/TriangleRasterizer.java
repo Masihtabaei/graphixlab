@@ -13,7 +13,7 @@ public final class TriangleRasterizer
     * @param pointC the last point of the triangle in sub pixel accuracy
 	@ @param flatColor flat (solid) color of the triangle.
     */
-  public static final void drawTriangle(int[] framebuffer, int w, int h, int2 pointA, int2 pointB, int2 pointC, int flatColor)
+  public static final void drawTriangle(int[] framebuffer, int w, int h, Int2 pointA, Int2 pointB, Int2 pointC, int flatColor)
   {
     // Find bounding box within regular pixel grid.
 

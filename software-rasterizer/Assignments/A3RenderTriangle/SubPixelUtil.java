@@ -28,16 +28,16 @@ public final class SubPixelUtil
   
   //! Convert from a regular (coarse) pixel to the CENTER a subpixel
   //! For 2D pixels. Provided for convenience.
-  public static int2 toSubPixel(int2 regularPixel)
+  public static Int2 toSubPixel(Int2 regularPixel)
   {
-    return new int2(toSubPixel(regularPixel.x), toSubPixel(regularPixel.y));  
+    return new Int2(toSubPixel(regularPixel.x), toSubPixel(regularPixel.y));  
   }
   
   //! Convert from a sub pixel to a regular (coarse) pixel.
   //! For 2D pixels. Provided for convenience.
-  public static int2 toRegularPixel(int2 subPixel)
+  public static Int2 toRegularPixel(Int2 subPixel)
   {
-    return new int2(toRegularPixel(subPixel.x), toRegularPixel(subPixel.y));
+    return new Int2(toRegularPixel(subPixel.x), toRegularPixel(subPixel.y));
   }
    
 }

@@ -4,23 +4,22 @@
 public final class PlaneEquation
 {
   //! Sets up the plane equation, given two points.
-  public PlaneEquation(int2 startPoint_, int2 endPoint_)
-  {
-     // TODO implement me! 
+  public PlaneEquation(Int2 startPoint_, Int2 endPoint_) {
+     direction = endPoint_.sub(startPoint_);
+     normal = direction.cross();
+     scaledDistanceToOrigin = normal.dot(startPoint_);
   }
 
   //! Evaluates the plane equation at point p
-  public int scaledSignedDistance(int2 p)
-  {
-    // TODO implement me!
-    return 0;
+  public int scaledSignedDistance(Int2 p) {
+    return normal.dot(p) - scaledDistanceToOrigin;
   }
 
   //! Direction of the line.
-  public int2 direction;
+  public Int2 direction;
   
   //! Normal vector of the line (no normalization required).
-  public int2 normal;  
+  public Int2 normal;  
   
   //! Scaled signed distance to the origin.
   public int scaledDistanceToOrigin;
